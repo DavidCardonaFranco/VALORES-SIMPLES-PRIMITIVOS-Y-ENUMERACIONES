@@ -1,0 +1,28 @@
+using System;
+
+namespace Programa_Enum
+{   
+    //Ubicación recomendada para el uso del Enum.
+    enum cantidadProductosAseo
+    {
+        Cepillo_Dental,
+        Papel_Higiénico,
+        Jabón_de_Cuerpo,
+        Pasta_Dental
+    }
+    class Program
+    {   
+        static void Main(string[] args)
+        {
+            Console.WriteLine("VALORES DE TIPO ENUM. \n");
+            /*Uso de Bucle foreach, para recorrer en la clase cada elemento e imprimirlos por 
+             consola */
+
+            foreach (cantidadProductosAseo i in Enum.GetValues(typeof(cantidadProductosAseo)))
+            {   
+                Console.WriteLine(i);
+            }
+            Console.ReadKey();
+        }
+    }
+}
