@@ -1,0 +1,36 @@
+using System;
+
+namespace Programa_de_Prueba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("VALORES DE TIPO ENTERO *sbyte*. ");
+            Console.WriteLine("Valor máximos: " + sbyte.MaxValue);
+            Console.WriteLine("Valor mínimo: " + sbyte.MinValue);
+
+            /*Inicialización de variables, tipo de dato "sbyte" que
+             empieza desde su valor mínimo y tipo de dato booleano
+             para comprobar que dentro de las iteraciones, su valor no
+             se exceda.*/
+
+            sbyte valor = sbyte.MinValue;
+            bool fueraLímite = false;
+
+            while (!fueraLímite)
+            {
+                Console.WriteLine(valor);
+                if (valor == sbyte.MaxValue)
+                {    
+                    fueraLímite = true;
+                }
+                else
+                {
+                    valor++;
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
